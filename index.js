@@ -1,5 +1,7 @@
 const title = document.getElementById("title");
+title.setAttribute('placeholder' , 'Title Here');
 const description = document.getElementById("description");
+ description.setAttribute('placeholder' , 'Description Here')
 const form = document.querySelector("form");
 const container = document.querySelector(".container");
 
@@ -46,5 +48,6 @@ form.addEventListener("submit" , (e) => {
         description : description.value,})
         localStorage.setItem("tasks" ,JSON.stringify(tasks));
         showAllTask();
+        form.reset();
   
 })
